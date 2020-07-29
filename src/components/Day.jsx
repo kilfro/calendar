@@ -31,7 +31,7 @@ const Day = ({ date, now, selected, selectDate }) => {
 }
 
 Day.propTypes = {
-    date: PropTypes.object.isRequired
+    date: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = state => {
