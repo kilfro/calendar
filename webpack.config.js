@@ -13,6 +13,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
+    alias: {
+        '@style': path.resolve(__dirname, 'src', 'styles')
+    }
   },
   devServer: {
     port: 3000,
@@ -29,8 +32,8 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader'],
       },
     ],
   },

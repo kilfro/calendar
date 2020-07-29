@@ -1,0 +1,33 @@
+@color: black;
+
+.day {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  margin: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: @color;
+  cursor: pointer;
+
+  &.selected {
+    background-color: @color;
+    color: white;
+    border: none !important;
+  }
+
+  &.today {
+    @color: red;
+    color: @color;
+  }
+
+  &.today.selected {
+    @color: red;
+    background-color: @color;
+    color: white;
+    border: none !important;
+  }
+}
