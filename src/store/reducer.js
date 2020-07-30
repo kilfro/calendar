@@ -26,6 +26,11 @@ export const reducer = (state = defaultState, action) => {
         month: currentDay,
         selected: currentDay,
       }
+    case actionTypes.UPDATE_NOW:
+      return {
+        ...state,
+        now: new Date(),
+      }
     default:
       return state
   }
