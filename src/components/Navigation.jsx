@@ -8,9 +8,9 @@ import '@style/navigation.less'
 const Navigation = ({ month, prevMonth, nextMonth, goToToday }) => {
     return (
         <div className='navigation'>
-            <Button clickHandler={() => prevMonth(month)}><ChevronLeft /> Prev</Button>
-            <Button clickHandler={() => goToToday()} filled={true}>Today</Button>
-            <Button clickHandler={() => nextMonth(month)}>Next <ChevronRight /></Button>
+            <Button clickHandler={() => prevMonth(month)}><ChevronLeft /></Button>
+            <Button clickHandler={() => goToToday()} filled={true}>Сегодня</Button>
+            <Button clickHandler={() => nextMonth(month)}><ChevronRight /></Button>
         </div>
     )
 }
