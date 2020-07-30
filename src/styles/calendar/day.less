@@ -1,9 +1,6 @@
-@color: black;
+@accent-color: black;
 
 .day {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
   border-radius: 50%;
   height: 2rem;
   width: 2rem;
@@ -13,23 +10,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: @color;
+  color: @accent-color;
   cursor: pointer;
 
+  &.has-task::after {
+    content: '.';
+    position: absolute;
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  &.weekend {
+    color: #999;
+  }
+
   &.selected {
-    background-color: @color;
+    background-color: @accent-color;
     color: white;
     border: none !important;
   }
 
   &.today {
-    @color: red;
-    color: @color;
+    @accent-color: red;
+    color: @accent-color;
   }
 
   &.today.selected {
-    @color: red;
-    background-color: @color;
+    @accent-color: red;
+    background-color: @accent-color;
     color: white;
     border: none !important;
   }
