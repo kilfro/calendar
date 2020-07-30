@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Day from './Day'
-import '@style/week.less'
+import '@style/calendar/week.less'
 
 const Week = ({ days }) =>
     <div className='week'>

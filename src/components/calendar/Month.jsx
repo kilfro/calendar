@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getMonthDays } from '../functions'
-import '@style/month.less'
+import { getMonthDays } from '../../functions'
+import '@style/calendar/month.less'
 import Week from './Week'
 
 const Month = ({ date }) => {

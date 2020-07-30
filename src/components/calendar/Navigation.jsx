@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons'
-import Button from './Button'
-import { prevMonth, nextMonth, goToToday } from '../store/actions'
-import '@style/navigation.less'
+import Button from '../Button'
+import { prevMonth, nextMonth, goToToday } from '@store/actions'
+import '@style/calendar/navigation.less'
 
 const Navigation = ({ month, prevMonth, nextMonth, goToToday }) => {
     return (

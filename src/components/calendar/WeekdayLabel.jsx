@@ -1,6 +1,6 @@
 import React from 'react'
-import '@style/day.less'
-import '@style/week.less'
+import '@style/calendar/day.less'
+import '@style/calendar/week.less'
 
 const WeekdayLabel = () => {
     const labels = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС']

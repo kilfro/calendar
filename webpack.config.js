@@ -14,7 +14,8 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx'],
     alias: {
-        '@style': path.resolve(__dirname, 'src', 'styles')
+        '@style': path.resolve(__dirname, 'src', 'styles'),
+        '@store': path.resolve(__dirname, 'src', 'store')
     }
   },
   devServer: {

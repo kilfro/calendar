@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { selectDate } from '../store/actions'
-import '@style/day.less'
+import { selectDate } from '@store/actions'
+import '@style/calendar/day.less'
 
 const Day = ({ date, now, selected, selectDate }) => {
 
