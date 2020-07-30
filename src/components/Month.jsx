@@ -1,12 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { getMonthDays } from '../functions'
 import '@style/month.less'
 import Week from './Week'
-import WeekdayLabel from './WeekdayLabel'
 
-const Month = ({ month, year }) => {
-    const days = getMonthDays(month, year)
+const Month = ({ date }) => {
+    const days = getMonthDays(date.getMonth(), date.getFullYear())
     const weeks = []
     let weekArray = []
 
@@ -20,15 +19,15 @@ const Month = ({ month, year }) => {
 
     return (
         <div className='month'>
-            <WeekdayLabel />
             {weeks.map(week => <Week days={week} key={week[0].getTime()} />)}
         </div>
     )
 }
 
-Month.propTypes = {
-    month: PropTypes.number.isRequired,
-    year: PropTypes.number.isRequired
+const mapStateToProps = state => {
+    return {
+        date: state.month
+    }
 }
 
-export default Month
+export default connect(mapStateToProps)(Month)

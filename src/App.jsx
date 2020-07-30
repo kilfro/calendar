@@ -1,12 +1,17 @@
 import React from 'react'
 import Month from './components/Month'
+import WeekdayLabel from './components/WeekdayLabel'
+import Navigation from './components/Navigation'
+
 
 const App = () => {
 
     return (
-        <>
-            <Month month={6} year={2020} />
-        </>
+        <div style={{width: 'fit-content'}}>
+            <Navigation />
+            <WeekdayLabel />
+            <Month />
+        </div>
     )
 }
 

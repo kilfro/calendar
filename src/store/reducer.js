@@ -1,8 +1,11 @@
 import { actionTypes } from './constants'
 
+const currentDay = new Date()
+
 const defaultState = {
-  now: new Date(),
-  selected: new Date(),
+  now: currentDay,
+  selected: currentDay,
+  month: currentDay,
 }
 
 export const reducer = (state = defaultState, action) => {
@@ -11,6 +14,17 @@ export const reducer = (state = defaultState, action) => {
       return {
         ...state,
         selected: action.date,
+      }
+    case actionTypes.SET_MONTH:
+      return {
+        ...state,
+        month: action.month,
+      }
+    case actionTypes.GO_TO_TODAY:
+      return {
+        ...state,
+        month: currentDay,
+        selected: currentDay,
       }
     default:
       return state
