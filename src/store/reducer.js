@@ -6,6 +6,7 @@ const defaultState = {
   now: currentDay,
   selected: currentDay,
   month: currentDay,
+  tasksMap: new Map()
 }
 
 export const reducer = (state = defaultState, action) => {
