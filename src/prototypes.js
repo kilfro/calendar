@@ -8,3 +8,12 @@ Date.prototype.getWeekDay = function () {
 Date.prototype.getTimeString = function () {
   return this.toTimeString().slice(0, 5)
 }
+
+Date.prototype.toString = function () {
+  const options = {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+  }
+  return this.toLocaleDateString('ru-RU', options)
+}
