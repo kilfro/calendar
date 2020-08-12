@@ -8,7 +8,7 @@ const App = ({ selected, tasksMap }) => {
     return (
         <div className='app-container'>
             <Calendar />
-            <Tasklist tasks={tasksMap.get(selected.toString())} />
+            <Tasklist tasks={tasksMap[selected.getString()]} />
         </div>
     )
 }

@@ -9,7 +9,7 @@ Date.prototype.getTimeString = function () {
   return this.toTimeString().slice(0, 5)
 }
 
-Date.prototype.toString = function () {
+Date.prototype.getString = function () {
   const options = {
     year: 'numeric',
     month: 'numeric',

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { selectDate } from '@store/actions'
 import '@style/calendar/day.less'
 
-const Day = ({ date, now, selected, hasTask, selectDate }) => {
+const Day = ({ date, now, selected, tasksMap, selectDate }) => {
 
     const isToday = date.toDateString() === now.toDateString()
     const isSelected = date.toDateString() === selected.toDateString()
@@ -24,7 +24,7 @@ const Day = ({ date, now, selected, hasTask, selectDate }) => {
             classes.push('weekend')
         }
 
-        if (hasTask) {
+        if (Object.keys(tasksMap).includes(date.getString())) {
             classes.push('has-task')
         }
 
@@ -42,14 +42,11 @@ Day.propTypes = {
     date: PropTypes.object.isRequired,
 }
 
-Day.defaultProps = {
-    hasTask: false
-}
-
 const mapStateToProps = state => {
     return {
         now: state.now,
-        selected: state.selected
+        selected: state.selected,
+        tasksMap: state.tasksMap
     }
 }
 

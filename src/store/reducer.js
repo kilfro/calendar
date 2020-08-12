@@ -1,4 +1,5 @@
 import { actionTypes } from './constants'
+import '../prototypes'
 
 const currentDay = new Date()
 
@@ -6,8 +7,19 @@ const defaultState = {
   now: currentDay,
   selected: currentDay,
   month: currentDay,
-  tasksMap: new Map()
+  tasksMap: {
+    [new Date(2020, 7, 2).getString()]: [
+      {
+        from: new Date(),
+        to: new Date(),
+        color: 'green',
+        title: 'Title',
+      },
+    ],
+  },
 }
+
+console.log(defaultState)
 
 export const reducer = (state = defaultState, action) => {
   switch (action.type) {
