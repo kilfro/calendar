@@ -44,6 +44,20 @@ export const reducer = (state = defaultState, action) => {
         ...state,
         now: new Date(),
       }
+    case actionTypes.ADD_TASK:
+      const { task } = action
+      const tasksMap = state
+
+      if (tasksMap.hasOwnProperty(task.from.getString())) {
+        tasksMap[task.from.getString()].push(task)
+      } else {
+        tasksMap[task.from.getString()] = [task]
+      }
+
+      return {
+        ...state,
+        tasksMap,
+      }
     default:
       return state
   }

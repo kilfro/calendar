@@ -33,3 +33,10 @@ export const goToToday = () => {
     type: actionTypes.GO_TO_TODAY,
   }
 }
+
+export const addTask = (task) => {
+  return {
+    type: actionTypes.ADD_TASK,
+    task: task,
+  }
+}

@@ -3,4 +3,5 @@ export const actionTypes = {
   SET_MONTH: 'SET_MONTH',
   UPDATE_NOW: 'UPDATE_NOW',
   GO_TO_TODAY: 'GO_TO_TODAY',
+  ADD_TASK: 'ADD_TASK',
 }
