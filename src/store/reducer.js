@@ -13,13 +13,15 @@ const reviver = (key, value) => {
   return value
 }
 
+const tasksMap = localStorage.getItem('tasksMap')
+  ? JSON.parse(localStorage.getItem('tasksMap'), reviver)
+  : {}
+
 const defaultState = {
   now: currentDay,
   selected: currentDay,
   month: currentDay,
-  tasksMap: localStorage.getItem('tasksMap')
-    ? JSON.parse(localStorage.getItem('tasksMap'), reviver)
-    : {},
+  tasksMap,
 }
 
 console.log(defaultState)
@@ -49,7 +51,7 @@ export const reducer = (state = defaultState, action) => {
       }
     case actionTypes.ADD_TASK:
       const { task } = action
-      const { tasksMap } = state
+      const tasksMap = {...state.tasksMap}
 
       if (tasksMap.hasOwnProperty(task.from.getString())) {
         tasksMap[task.from.getString()].push(task)
