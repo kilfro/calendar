@@ -3,20 +3,23 @@ import '../prototypes'
 
 const currentDay = new Date()
 
+const dateFormat = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z$/
+
+const reviver = (key, value) => {
+  if (typeof value === 'string' && dateFormat.test(value)) {
+    return new Date(value)
+  }
+
+  return value
+}
+
 const defaultState = {
   now: currentDay,
   selected: currentDay,
   month: currentDay,
-  tasksMap: {
-    [new Date(2020, 7, 2).getString()]: [
-      {
-        from: new Date(),
-        to: new Date(),
-        color: 'green',
-        title: 'Title',
-      },
-    ],
-  },
+  tasksMap: localStorage.getItem('tasksMap')
+    ? JSON.parse(localStorage.getItem('tasksMap'), reviver)
+    : {},
 }
 
 console.log(defaultState)
@@ -46,13 +49,15 @@ export const reducer = (state = defaultState, action) => {
       }
     case actionTypes.ADD_TASK:
       const { task } = action
-      const tasksMap = state
+      const { tasksMap } = state
 
       if (tasksMap.hasOwnProperty(task.from.getString())) {
         tasksMap[task.from.getString()].push(task)
       } else {
         tasksMap[task.from.getString()] = [task]
       }
+
+      localStorage.setItem('tasksMap', JSON.stringify(tasksMap))
 
       return {
         ...state,
