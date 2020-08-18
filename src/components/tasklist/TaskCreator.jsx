@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import '@style/tasklist/taskcreator.less'
 import Button from '../Button'
 import { addTask } from '../../store/actions'
+import DateInput from './DateInput'
+import ColorSelector from './ColorSelector'
 
 const TaskCreator = ({ selected, addTask }) => {
     const [fromDate, setFromDate] = useState(selected)
@@ -11,7 +13,7 @@ const TaskCreator = ({ selected, addTask }) => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
 
-    const submitHandler = (event) => {
+    const submitHandler = () => {
         const task = {
             from: fromDate,
             to: toDate,
@@ -37,29 +39,27 @@ const TaskCreator = ({ selected, addTask }) => {
     return (
         <div className='create-from'>
             <h3>Новая задача</h3>
-            <label>
-                Начало
-            <input type='datetime-local' value={fromDate.toLocalISOString()} onChange={event => setFromDate(new Date(event.target.value))} id='from' />
-            </label>
-            <label>
-                Конец
-            <input type='datetime-local' value={toDate.toLocalISOString()} onChange={event => setToDate(new Date(event.target.value))} />
-            </label>
-            <label>
-                Цвет
-                <select value={color} onChange={event => setColor(event.target.value)}>
-                    <option value='green'>Зеленый</option>
-                    <option value='red'>Красный</option>
-                    <option value='orange'>Желтый</option>
-                    <option value='blue'>Синий</option>
-                </select>
-            </label>
+            <DateInput
+                label='Начало'
+                value={fromDate.toLocalISOString()}
+                changeHandler={event => setFromDate(new Date(event.target.value))}
+            />
+            <DateInput
+                label='Конец'
+                value={toDate.toLocalISOString()}
+                changeHandler={event => setToDate(new Date(event.target.value))}
+            />
+
+            <ColorSelector
+                value={color}
+                changeHandler={setColor}
+            />
+
             <input placeholder='Заголовок' value={title} onChange={event => setTitle(event.target.value)} />
             <textarea placeholder='Описание' value={description} onChange={event => setDescription(event.target.value)} />
 
             <Button clickHandler={clearHandler}>Очистить</Button>
             <Button clickHandler={submitHandler} filled={true} >Сохранить</Button>
-            {/* <Button clickHandler={() => formRef.current.submit()} filled={true} >Сохранить</Button> */}
         </div>
     )
 }

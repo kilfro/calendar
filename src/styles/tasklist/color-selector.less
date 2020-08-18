@@ -1,0 +1,39 @@
+.color-selector {
+  & .options {
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem;
+  }
+
+  & .option {
+    display: flex;
+    padding: 0.3rem;
+    cursor: pointer;
+    border: white 1px solid;
+
+    &:hover {
+      border-color: gray;
+    }
+
+    & div {
+      height: 1rem;
+      width: 10rem;
+    }
+  }
+
+  & .green {
+    background-color: green;
+  }
+
+  & .red {
+    background-color: red;
+  }
+
+  & .orange {
+    background-color: orange;
+  }
+
+  & .blue {
+    background-color: blue;
+  }
+}
