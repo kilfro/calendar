@@ -58,8 +58,10 @@ const TaskCreator = ({ selected, addTask }) => {
             <input placeholder='Заголовок' value={title} onChange={event => setTitle(event.target.value)} />
             <textarea placeholder='Описание' value={description} onChange={event => setDescription(event.target.value)} />
 
-            <Button clickHandler={clearHandler}>Очистить</Button>
-            <Button clickHandler={submitHandler} filled={true} >Сохранить</Button>
+            <div className='buttons'>
+                <Button clickHandler={clearHandler}>Очистить</Button>
+                <Button clickHandler={submitHandler} filled={true} >Сохранить</Button>
+            </div>
         </div>
     )
 }

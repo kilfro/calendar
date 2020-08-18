@@ -1,4 +1,18 @@
 .create-from {
   display: inline-grid;
   margin: 1rem;
+
+  & input,
+  textarea {
+    margin: 0.25rem 0;
+  }
+
+  & textarea {
+    min-height: 8rem;
+  }
+
+  & .buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }
