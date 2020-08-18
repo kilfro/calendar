@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '@style/tasklist/date-input.less'
 
 const DateInput = ({ label, value, changeHandler }) =>
-    <label>
+    <label className='date-input'>
         {label}
         <input
             type='datetime-local'
