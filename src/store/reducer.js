@@ -27,6 +27,8 @@ const defaultState = {
 console.log(defaultState)
 
 export const reducer = (state = defaultState, action) => {
+  const { selected } = state
+
   switch (action.type) {
     case actionTypes.SELECT_DATE:
       return {
@@ -67,7 +69,6 @@ export const reducer = (state = defaultState, action) => {
       }
     case actionTypes.REMOVE_TASK:
       const { uid } = action
-      const { selected } = state
       const tasks = { ...state.tasksMap }
       const filteredTasks = tasks[selected.getString()].filter(task => task.uid !== uid)
 
@@ -76,7 +77,19 @@ export const reducer = (state = defaultState, action) => {
 
       return {
         ...state,
-        tasksMap: tasks
+        tasksMap: tasks,
+      }
+    case actionTypes.EDIT_TASK:
+      const editedTask = action.task
+      const tasksToEdit = { ...state.tasksMap }
+      const editedTasks = tasksToEdit[selected.getString()].map(task => task.uid === editedTask.uid ? editedTask : task)
+
+      tasksToEdit[selected.getString()] = editedTask
+      localStorage.setItem('tasksMap', JSON.stringify(tasksToEdit))
+
+      return {
+        ...state,
+        tasksMap: tasksToEdit,
       }
     default:
       return state
