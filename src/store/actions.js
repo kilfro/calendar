@@ -47,3 +47,10 @@ export const removeTask = (uid) => {
     uid,
   }
 }
+
+export const editTask = (task) => {
+  return {
+    type: actionTypes.EDIT_TASK,
+    task,
+  }
+}

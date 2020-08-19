@@ -5,4 +5,5 @@ export const actionTypes = {
   GO_TO_TODAY: 'GO_TO_TODAY',
   ADD_TASK: 'ADD_TASK',
   REMOVE_TASK: 'REMOVE_TASK',
+  EDIT_TASK: 'EDIT_TASK',
 }
