@@ -51,7 +51,7 @@ export const reducer = (state = defaultState, action) => {
       }
     case actionTypes.ADD_TASK:
       const { task } = action
-      const tasksMap = {...state.tasksMap}
+      const tasksMap = { ...state.tasksMap }
 
       if (tasksMap.hasOwnProperty(task.from.getString())) {
         tasksMap[task.from.getString()].push(task)
@@ -64,6 +64,18 @@ export const reducer = (state = defaultState, action) => {
       return {
         ...state,
         tasksMap,
+      }
+    case actionTypes.REMOVE_TASK:
+      const { uid } = action
+      const { selected } = state
+      const tasks = { ...state.tasksMap }
+      const filteredTasks = tasks[selected.getString()].filter(task => task.uid !== uid)
+
+      tasks[selected.getString()] = filteredTasks
+
+      return {
+        ...state,
+        tasksMap: tasks
       }
     default:
       return state
