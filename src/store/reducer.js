@@ -72,6 +72,7 @@ export const reducer = (state = defaultState, action) => {
       const filteredTasks = tasks[selected.getString()].filter(task => task.uid !== uid)
 
       tasks[selected.getString()] = filteredTasks
+      localStorage.setItem('tasksMap', JSON.stringify(tasks))
 
       return {
         ...state,
