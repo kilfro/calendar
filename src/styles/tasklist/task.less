@@ -6,8 +6,30 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 
+  & .top-row {
+    font-weight: bold;
+    display: flex;
+    padding-bottom: 0.5rem;
+
+    & .time {
+      min-width: 6.5rem;
+    }
+
+    & .title {
+      flex-grow: 1;
+    }
+
+    & .buttons {
+      min-width: 2rem;
+
+      & svg {
+        cursor: pointer;
+      }
+    }
+  }
+
   & h3 {
-      margin: 0 0 0.5rem 0;
+    margin: 0 0 0.5rem 0;
   }
 
   &.green {
