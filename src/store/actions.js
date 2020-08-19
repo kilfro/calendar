@@ -37,6 +37,13 @@ export const goToToday = () => {
 export const addTask = (task) => {
   return {
     type: actionTypes.ADD_TASK,
-    task: task,
+    task,
+  }
+}
+
+export const removeTask = (uid) => {
+  return {
+    type: actionTypes.REMOVE_TASK,
+    uid,
   }
 }
