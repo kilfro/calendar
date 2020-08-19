@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
+import { v4 as getUidV4 } from 'uuid'
 import '@style/tasklist/taskcreator.less'
 import Button from '../Button'
 import { addTask } from '../../store/actions'
@@ -15,6 +16,7 @@ const TaskCreator = ({ selected, addTask }) => {
 
     const submitHandler = () => {
         const task = {
+            uid: getUidV4(),
             from: fromDate,
             to: toDate,
             color,
