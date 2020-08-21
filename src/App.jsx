@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Calendar from './components/calendar/Calendar'
 import Tasklist from './components/tasklist/Tasklist'
 import '@style/app.less'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import TaskCreator from './components/tasklist/TaskCreator'
 
 const App = ({ selected, tasksMap }) => {

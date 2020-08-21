@@ -36,8 +36,6 @@ const TaskCreator = ({ selected, addTask }) => {
         setDescription('')
     }
 
-    console.log(fromDate.toISOString())
-
     return (
         <div className='create-from'>
             <h3>Новая задача</h3>

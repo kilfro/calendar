@@ -84,7 +84,7 @@ export const reducer = (state = defaultState, action) => {
       const tasksToEdit = { ...state.tasksMap }
       const editedTasks = tasksToEdit[selected.getString()].map(task => task.uid === editedTask.uid ? editedTask : task)
 
-      tasksToEdit[selected.getString()] = editedTask
+      tasksToEdit[selected.getString()] = editedTasks
       localStorage.setItem('tasksMap', JSON.stringify(tasksToEdit))
 
       return {
