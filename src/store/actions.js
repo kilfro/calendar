@@ -14,6 +14,12 @@ export const setMonth = (month) => {
   }
 }
 
+export const updateNow = () => {
+  return {
+    type: actionTypes.UPDATE_NOW,
+  }
+}
+
 export const prevMonth = (date) => {
   let month = date.getMonth()
   const prev = new Date(date.getFullYear(), month - 1)

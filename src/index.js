@@ -3,10 +3,10 @@ import { render } from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { reducer } from './store/reducer'
-import { actionTypes } from './store/constants'
 import '@style/index.less'
 import './prototypes'
 import App from './App'
+import { updateNow } from './store/actions'
 
 const store = createStore(
   reducer,
@@ -14,7 +14,7 @@ const store = createStore(
 )
 
 window.setInterval(() => {
-  store.dispatch({ type: actionTypes.UPDATE_NOW })
+  store.dispatch(updateNow())
 }, 60000)
 
 render(

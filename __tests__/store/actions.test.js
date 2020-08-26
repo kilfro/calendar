@@ -18,6 +18,12 @@ describe('Action creator', () => {
     expect(action.month).toEqual(month)
   })
 
+  test("has to create 'update now' action correctly", () => {
+    const action = creator.updateNow()
+
+    expect(action.type).toEqual(actionTypes.UPDATE_NOW)
+  })
+
   test("has to create 'previous month' action correctly", () => {
     const date = new Date(2020, 5)
     const action = creator.prevMonth(date)
