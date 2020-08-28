@@ -5,19 +5,23 @@ Date.prototype.getWeekDay = function () {
   return this.getDay() > 0 ? this.getDay() - 1 : 6
 }
 
+/**
+ *  Returns time string in format HH:mm
+ */
 Date.prototype.getTimeString = function () {
   return this.toTimeString().slice(0, 5)
 }
 
+/**
+ *  Returns date-time string in format yyyy-MM-dd
+ */
 Date.prototype.getString = function () {
-  const options = {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-  }
-  return this.toLocaleDateString('ru-RU', options)
+  return this.getFullYear() + '-' + (this.getMonth() + 1) + '-' + this.getDate()
 }
 
+/**
+ *  Returns date-time string in format yyyy-MM-ddTHH:mm for dateTime input
+ */
 Date.prototype.toLocalISOString = function () {
   var pad = function (num) {
     var norm = Math.floor(Math.abs(num))
