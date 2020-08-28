@@ -24,8 +24,6 @@ const defaultState = {
   tasksMap,
 }
 
-console.log(defaultState)
-
 export const reducer = (state = defaultState, action) => {
   const { selected } = state
 
