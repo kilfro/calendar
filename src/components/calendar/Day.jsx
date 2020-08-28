@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { selectDate } from '@store/actions'
 import '@style/calendar/day.less'
 
-const Day = ({ date, now, selected, tasksMap, selectDate }) => {
+export const Day = ({ date, now, selected, tasksMap, selectDate }) => {
 
     const isToday = date.toDateString() === now.toDateString()
     const isSelected = date.toDateString() === selected.toDateString()
