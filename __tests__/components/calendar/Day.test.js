@@ -5,7 +5,7 @@ import '../../../src/prototypes'
 
 describe('Day component', () => {
   const getComponent = (props) => {
-    const now = new Date()
+    const now = new Date(2020, 7, 28)
     return shallow(
       <Day date={now} now={now} selected={now} tasksMap={{}} {...props} />
     )
@@ -40,7 +40,7 @@ describe('Day component', () => {
       now: new Date(1970, 0, 1),
       selected: new Date(1970, 0, 1),
       tasksMap: {
-        [new Date().getString()]: [],
+        [new Date(2020, 7, 28).getString()]: [],
       },
     })
 
