@@ -20,7 +20,7 @@ exports[`Calendar should render correctly 1`] = `
       <Connect(Navigation)>
         <Navigation
           goToToday={[Function]}
-          month={2020-08-31T12:12:19.313Z}
+          month={2020-05-21T21:00:00.000Z}
           nextMonth={[Function]}
           prevMonth={[Function]}
         >
@@ -98,12 +98,12 @@ exports[`Calendar should render correctly 1`] = `
       <Connect(MonthLabel)>
         <MonthLabel
           dispatch={[Function]}
-          month={2020-08-31T12:12:19.313Z}
+          month={2020-05-21T21:00:00.000Z}
         >
           <div
             className="month-label"
           >
-            август 2020
+            май 2020
           </div>
         </MonthLabel>
       </Connect(MonthLabel)>
@@ -157,7 +157,7 @@ exports[`Calendar should render correctly 1`] = `
       </WeekdayLabel>
       <Connect(Month)>
         <Month
-          date={2020-08-31T12:12:19.313Z}
+          date={2020-05-21T21:00:00.000Z}
           dispatch={[Function]}
         >
           <div
@@ -166,28 +166,29 @@ exports[`Calendar should render correctly 1`] = `
             <Week
               days={
                 Array [
-                  2020-07-31T21:00:00.000Z,
-                  2020-08-01T21:00:00.000Z,
+                  2020-04-30T21:00:00.000Z,
+                  2020-05-01T21:00:00.000Z,
+                  2020-05-02T21:00:00.000Z,
                 ]
               }
-              key="1596229200000"
+              key="1588280400000"
             >
               <div
                 className="week"
               >
                 <Connect(Day)
-                  date={2020-07-31T21:00:00.000Z}
-                  key="1596229200000"
+                  date={2020-04-30T21:00:00.000Z}
+                  key="1588280400000"
                 >
                   <Day
-                    date={2020-07-31T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-04-30T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
-                      className="day weekend"
+                      className="day"
                       onClick={[Function]}
                     >
                       1
@@ -195,14 +196,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-01T21:00:00.000Z}
-                  key="1596315600000"
+                  date={2020-05-01T21:00:00.000Z}
+                  key="1588366800000"
                 >
                   <Day
-                    date={2020-08-01T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-01T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -213,53 +214,53 @@ exports[`Calendar should render correctly 1`] = `
                     </div>
                   </Day>
                 </Connect(Day)>
-              </div>
-            </Week>
-            <Week
-              days={
-                Array [
-                  2020-08-02T21:00:00.000Z,
-                  2020-08-03T21:00:00.000Z,
-                  2020-08-04T21:00:00.000Z,
-                  2020-08-05T21:00:00.000Z,
-                  2020-08-06T21:00:00.000Z,
-                  2020-08-07T21:00:00.000Z,
-                  2020-08-08T21:00:00.000Z,
-                ]
-              }
-              key="1596402000000"
-            >
-              <div
-                className="week"
-              >
                 <Connect(Day)
-                  date={2020-08-02T21:00:00.000Z}
-                  key="1596402000000"
+                  date={2020-05-02T21:00:00.000Z}
+                  key="1588453200000"
                 >
                   <Day
-                    date={2020-08-02T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-02T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
-                      className="day"
+                      className="day weekend"
                       onClick={[Function]}
                     >
                       3
                     </div>
                   </Day>
                 </Connect(Day)>
+              </div>
+            </Week>
+            <Week
+              days={
+                Array [
+                  2020-05-03T21:00:00.000Z,
+                  2020-05-04T21:00:00.000Z,
+                  2020-05-05T21:00:00.000Z,
+                  2020-05-06T21:00:00.000Z,
+                  2020-05-07T21:00:00.000Z,
+                  2020-05-08T21:00:00.000Z,
+                  2020-05-09T21:00:00.000Z,
+                ]
+              }
+              key="1588539600000"
+            >
+              <div
+                className="week"
+              >
                 <Connect(Day)
-                  date={2020-08-03T21:00:00.000Z}
-                  key="1596488400000"
+                  date={2020-05-03T21:00:00.000Z}
+                  key="1588539600000"
                 >
                   <Day
-                    date={2020-08-03T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-03T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -271,14 +272,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-04T21:00:00.000Z}
-                  key="1596574800000"
+                  date={2020-05-04T21:00:00.000Z}
+                  key="1588626000000"
                 >
                   <Day
-                    date={2020-08-04T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-04T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -290,14 +291,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-05T21:00:00.000Z}
-                  key="1596661200000"
+                  date={2020-05-05T21:00:00.000Z}
+                  key="1588712400000"
                 >
                   <Day
-                    date={2020-08-05T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-05T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -309,14 +310,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-06T21:00:00.000Z}
-                  key="1596747600000"
+                  date={2020-05-06T21:00:00.000Z}
+                  key="1588798800000"
                 >
                   <Day
-                    date={2020-08-06T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-06T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -328,18 +329,18 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-07T21:00:00.000Z}
-                  key="1596834000000"
+                  date={2020-05-07T21:00:00.000Z}
+                  key="1588885200000"
                 >
                   <Day
-                    date={2020-08-07T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-07T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
-                      className="day weekend"
+                      className="day"
                       onClick={[Function]}
                     >
                       8
@@ -347,14 +348,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-08T21:00:00.000Z}
-                  key="1596920400000"
+                  date={2020-05-08T21:00:00.000Z}
+                  key="1588971600000"
                 >
                   <Day
-                    date={2020-08-08T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-08T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -365,53 +366,53 @@ exports[`Calendar should render correctly 1`] = `
                     </div>
                   </Day>
                 </Connect(Day)>
-              </div>
-            </Week>
-            <Week
-              days={
-                Array [
-                  2020-08-09T21:00:00.000Z,
-                  2020-08-10T21:00:00.000Z,
-                  2020-08-11T21:00:00.000Z,
-                  2020-08-12T21:00:00.000Z,
-                  2020-08-13T21:00:00.000Z,
-                  2020-08-14T21:00:00.000Z,
-                  2020-08-15T21:00:00.000Z,
-                ]
-              }
-              key="1597006800000"
-            >
-              <div
-                className="week"
-              >
                 <Connect(Day)
-                  date={2020-08-09T21:00:00.000Z}
-                  key="1597006800000"
+                  date={2020-05-09T21:00:00.000Z}
+                  key="1589058000000"
                 >
                   <Day
-                    date={2020-08-09T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-09T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
-                      className="day"
+                      className="day weekend"
                       onClick={[Function]}
                     >
                       10
                     </div>
                   </Day>
                 </Connect(Day)>
+              </div>
+            </Week>
+            <Week
+              days={
+                Array [
+                  2020-05-10T21:00:00.000Z,
+                  2020-05-11T21:00:00.000Z,
+                  2020-05-12T21:00:00.000Z,
+                  2020-05-13T21:00:00.000Z,
+                  2020-05-14T21:00:00.000Z,
+                  2020-05-15T21:00:00.000Z,
+                  2020-05-16T21:00:00.000Z,
+                ]
+              }
+              key="1589144400000"
+            >
+              <div
+                className="week"
+              >
                 <Connect(Day)
-                  date={2020-08-10T21:00:00.000Z}
-                  key="1597093200000"
+                  date={2020-05-10T21:00:00.000Z}
+                  key="1589144400000"
                 >
                   <Day
-                    date={2020-08-10T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-10T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -423,14 +424,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-11T21:00:00.000Z}
-                  key="1597179600000"
+                  date={2020-05-11T21:00:00.000Z}
+                  key="1589230800000"
                 >
                   <Day
-                    date={2020-08-11T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-11T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -442,14 +443,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-12T21:00:00.000Z}
-                  key="1597266000000"
+                  date={2020-05-12T21:00:00.000Z}
+                  key="1589317200000"
                 >
                   <Day
-                    date={2020-08-12T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-12T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -461,14 +462,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-13T21:00:00.000Z}
-                  key="1597352400000"
+                  date={2020-05-13T21:00:00.000Z}
+                  key="1589403600000"
                 >
                   <Day
-                    date={2020-08-13T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-13T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -480,18 +481,18 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-14T21:00:00.000Z}
-                  key="1597438800000"
+                  date={2020-05-14T21:00:00.000Z}
+                  key="1589490000000"
                 >
                   <Day
-                    date={2020-08-14T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-14T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
-                      className="day weekend"
+                      className="day"
                       onClick={[Function]}
                     >
                       15
@@ -499,14 +500,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-15T21:00:00.000Z}
-                  key="1597525200000"
+                  date={2020-05-15T21:00:00.000Z}
+                  key="1589576400000"
                 >
                   <Day
-                    date={2020-08-15T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-15T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -517,53 +518,53 @@ exports[`Calendar should render correctly 1`] = `
                     </div>
                   </Day>
                 </Connect(Day)>
-              </div>
-            </Week>
-            <Week
-              days={
-                Array [
-                  2020-08-16T21:00:00.000Z,
-                  2020-08-17T21:00:00.000Z,
-                  2020-08-18T21:00:00.000Z,
-                  2020-08-19T21:00:00.000Z,
-                  2020-08-20T21:00:00.000Z,
-                  2020-08-21T21:00:00.000Z,
-                  2020-08-22T21:00:00.000Z,
-                ]
-              }
-              key="1597611600000"
-            >
-              <div
-                className="week"
-              >
                 <Connect(Day)
-                  date={2020-08-16T21:00:00.000Z}
-                  key="1597611600000"
+                  date={2020-05-16T21:00:00.000Z}
+                  key="1589662800000"
                 >
                   <Day
-                    date={2020-08-16T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-16T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
-                      className="day"
+                      className="day weekend"
                       onClick={[Function]}
                     >
                       17
                     </div>
                   </Day>
                 </Connect(Day)>
+              </div>
+            </Week>
+            <Week
+              days={
+                Array [
+                  2020-05-17T21:00:00.000Z,
+                  2020-05-18T21:00:00.000Z,
+                  2020-05-19T21:00:00.000Z,
+                  2020-05-20T21:00:00.000Z,
+                  2020-05-21T21:00:00.000Z,
+                  2020-05-22T21:00:00.000Z,
+                  2020-05-23T21:00:00.000Z,
+                ]
+              }
+              key="1589749200000"
+            >
+              <div
+                className="week"
+              >
                 <Connect(Day)
-                  date={2020-08-17T21:00:00.000Z}
-                  key="1597698000000"
+                  date={2020-05-17T21:00:00.000Z}
+                  key="1589749200000"
                 >
                   <Day
-                    date={2020-08-17T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-17T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -575,14 +576,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-18T21:00:00.000Z}
-                  key="1597784400000"
+                  date={2020-05-18T21:00:00.000Z}
+                  key="1589835600000"
                 >
                   <Day
-                    date={2020-08-18T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-18T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -594,14 +595,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-19T21:00:00.000Z}
-                  key="1597870800000"
+                  date={2020-05-19T21:00:00.000Z}
+                  key="1589922000000"
                 >
                   <Day
-                    date={2020-08-19T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-19T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -613,14 +614,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-20T21:00:00.000Z}
-                  key="1597957200000"
+                  date={2020-05-20T21:00:00.000Z}
+                  key="1590008400000"
                 >
                   <Day
-                    date={2020-08-20T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-20T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -632,18 +633,18 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-21T21:00:00.000Z}
-                  key="1598043600000"
+                  date={2020-05-21T21:00:00.000Z}
+                  key="1590094800000"
                 >
                   <Day
-                    date={2020-08-21T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-21T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
-                      className="day weekend"
+                      className="day selected today"
                       onClick={[Function]}
                     >
                       22
@@ -651,14 +652,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-22T21:00:00.000Z}
-                  key="1598130000000"
+                  date={2020-05-22T21:00:00.000Z}
+                  key="1590181200000"
                 >
                   <Day
-                    date={2020-08-22T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-22T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -669,53 +670,53 @@ exports[`Calendar should render correctly 1`] = `
                     </div>
                   </Day>
                 </Connect(Day)>
-              </div>
-            </Week>
-            <Week
-              days={
-                Array [
-                  2020-08-23T21:00:00.000Z,
-                  2020-08-24T21:00:00.000Z,
-                  2020-08-25T21:00:00.000Z,
-                  2020-08-26T21:00:00.000Z,
-                  2020-08-27T21:00:00.000Z,
-                  2020-08-28T21:00:00.000Z,
-                  2020-08-29T21:00:00.000Z,
-                ]
-              }
-              key="1598216400000"
-            >
-              <div
-                className="week"
-              >
                 <Connect(Day)
-                  date={2020-08-23T21:00:00.000Z}
-                  key="1598216400000"
+                  date={2020-05-23T21:00:00.000Z}
+                  key="1590267600000"
                 >
                   <Day
-                    date={2020-08-23T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-23T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
-                      className="day"
+                      className="day weekend"
                       onClick={[Function]}
                     >
                       24
                     </div>
                   </Day>
                 </Connect(Day)>
+              </div>
+            </Week>
+            <Week
+              days={
+                Array [
+                  2020-05-24T21:00:00.000Z,
+                  2020-05-25T21:00:00.000Z,
+                  2020-05-26T21:00:00.000Z,
+                  2020-05-27T21:00:00.000Z,
+                  2020-05-28T21:00:00.000Z,
+                  2020-05-29T21:00:00.000Z,
+                  2020-05-30T21:00:00.000Z,
+                ]
+              }
+              key="1590354000000"
+            >
+              <div
+                className="week"
+              >
                 <Connect(Day)
-                  date={2020-08-24T21:00:00.000Z}
-                  key="1598302800000"
+                  date={2020-05-24T21:00:00.000Z}
+                  key="1590354000000"
                 >
                   <Day
-                    date={2020-08-24T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-24T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -727,14 +728,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-25T21:00:00.000Z}
-                  key="1598389200000"
+                  date={2020-05-25T21:00:00.000Z}
+                  key="1590440400000"
                 >
                   <Day
-                    date={2020-08-25T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-25T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -746,14 +747,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-26T21:00:00.000Z}
-                  key="1598475600000"
+                  date={2020-05-26T21:00:00.000Z}
+                  key="1590526800000"
                 >
                   <Day
-                    date={2020-08-26T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-26T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -765,14 +766,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-27T21:00:00.000Z}
-                  key="1598562000000"
+                  date={2020-05-27T21:00:00.000Z}
+                  key="1590613200000"
                 >
                   <Day
-                    date={2020-08-27T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-27T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -784,18 +785,18 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-28T21:00:00.000Z}
-                  key="1598648400000"
+                  date={2020-05-28T21:00:00.000Z}
+                  key="1590699600000"
                 >
                   <Day
-                    date={2020-08-28T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-28T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
-                      className="day weekend"
+                      className="day"
                       onClick={[Function]}
                     >
                       29
@@ -803,14 +804,14 @@ exports[`Calendar should render correctly 1`] = `
                   </Day>
                 </Connect(Day)>
                 <Connect(Day)
-                  date={2020-08-29T21:00:00.000Z}
-                  key="1598734800000"
+                  date={2020-05-29T21:00:00.000Z}
+                  key="1590786000000"
                 >
                   <Day
-                    date={2020-08-29T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-29T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
@@ -821,32 +822,19 @@ exports[`Calendar should render correctly 1`] = `
                     </div>
                   </Day>
                 </Connect(Day)>
-              </div>
-            </Week>
-            <Week
-              days={
-                Array [
-                  2020-08-30T21:00:00.000Z,
-                ]
-              }
-              key="1598821200000"
-            >
-              <div
-                className="week"
-              >
                 <Connect(Day)
-                  date={2020-08-30T21:00:00.000Z}
-                  key="1598821200000"
+                  date={2020-05-30T21:00:00.000Z}
+                  key="1590872400000"
                 >
                   <Day
-                    date={2020-08-30T21:00:00.000Z}
-                    now={2020-08-31T12:12:19.313Z}
+                    date={2020-05-30T21:00:00.000Z}
+                    now={2020-05-21T21:00:00.000Z}
                     selectDate={[Function]}
-                    selected={2020-08-31T12:12:19.313Z}
+                    selected={2020-05-21T21:00:00.000Z}
                     tasksMap={Object {}}
                   >
                     <div
-                      className="day selected today"
+                      className="day weekend"
                       onClick={[Function]}
                     >
                       31

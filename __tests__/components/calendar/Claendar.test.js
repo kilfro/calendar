@@ -6,9 +6,9 @@ import Calendar from '../../../src/components/calendar/Calendar'
 describe('Calendar', () => {
     test('should render correctly', () => {
         const state = {
-            now: new Date(),
-            selected: new Date(),
-            month: new Date(),
+            now: new Date(2020, 4, 22),
+            selected: new Date(2020, 4, 22),
+            month: new Date(2020, 4, 22),
             tasksMap: {}
         }
         const store = configureStore([])(state)

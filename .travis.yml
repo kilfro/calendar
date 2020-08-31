@@ -3,5 +3,12 @@ node_js:
   - 12
 before_install:
   - export TZ=Europe/Moscow
+  - export LANG=ru_RU.UTF-8
+  - export LC_COLLATE=ru_RU.UTF-8
+  - export LC_CTYPE=ru_RU.UTF-8
+  - export LC_MESSAGES=ru_RU.UTF-8
+  - export LC_MONETARY=ru_RU.UTF-8
+  - export LC_NUMERIC=ru_RU.UTF-8
+  - export LC_TIME=ru_RU.UTF-8
 script:
   - npm run test -- --verbose
