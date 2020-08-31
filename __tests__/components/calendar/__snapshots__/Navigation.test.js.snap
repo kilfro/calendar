@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component should renders correctly 1`] = `
+<div
+  className="navigation"
+>
+  <Button
+    clickHandler={[Function]}
+    filled={false}
+  >
+    <ForwardRef
+      color="currentColor"
+      size="1em"
+    />
+  </Button>
+  <Button
+    clickHandler={[Function]}
+    filled={true}
+  >
+    Сегодня
+  </Button>
+  <Button
+    clickHandler={[Function]}
+    filled={false}
+  >
+    <ForwardRef
+      color="currentColor"
+      size="1em"
+    />
+  </Button>
+</div>
+`;

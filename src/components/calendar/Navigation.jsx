@@ -5,7 +5,7 @@ import Button from '../Button'
 import { prevMonth, nextMonth, goToToday } from '@store/actions'
 import '@style/calendar/navigation.less'
 
-const Navigation = ({ month, prevMonth, nextMonth, goToToday }) => {
+export const Navigation = ({ month, prevMonth, nextMonth, goToToday }) => {
     return (
         <div className='navigation'>
             <Button clickHandler={() => prevMonth(month)}><ChevronLeft /></Button>
