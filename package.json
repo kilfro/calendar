@@ -77,7 +77,8 @@
       "**/*.{js,jsx}",
       "!**/node_modules/**",
       "!**/coverage/**",
-      "!**/dist/**"
+      "!**/dist/**",
+      "!**/*.config.*"
     ]
   }
 }
