@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import '../../prototypes'
 import '@style/calendar/monthLabel.less'
 
 export const MonthLabel = ({ month }) => {
     return (
         <div className='month-label'>
-            {month.toLocaleDateString('ru-RU', { month: 'long', year: 'numeric' }).replace(' г.', '')}
+            {month.toMonthYearString('ru-RU', { month: 'long', year: 'numeric' }).replace(' г.', '')}
         </div>
     )
 }

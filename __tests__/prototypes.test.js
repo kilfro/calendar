@@ -24,4 +24,11 @@ describe('Date prototype function', () => {
 
     expect(date.toLocalISOString()).toEqual('2020-05-22T12:34')
   })
+
+  test("'toMonthYearString' hast to return correct string", () => {
+    const date = new Date(2020, 4, 22)
+
+    expect(date.toMonthYearString()).toEqual('май 2020')
+  })
+  
 })
