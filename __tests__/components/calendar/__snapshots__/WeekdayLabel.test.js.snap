@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeekdayLabel should render correctly 1`] = `
+<div
+  className="week label"
+>
+  <div
+    className="day label"
+    key="ПН"
+  >
+    ПН
+  </div>
+  <div
+    className="day label"
+    key="ВТ"
+  >
+    ВТ
+  </div>
+  <div
+    className="day label"
+    key="СР"
+  >
+    СР
+  </div>
+  <div
+    className="day label"
+    key="ЧТ"
+  >
+    ЧТ
+  </div>
+  <div
+    className="day label"
+    key="ПТ"
+  >
+    ПТ
+  </div>
+  <div
+    className="day label"
+    key="СБ"
+  >
+    СБ
+  </div>
+  <div
+    className="day label"
+    key="ВС"
+  >
+    ВС
+  </div>
+</div>
+`;
