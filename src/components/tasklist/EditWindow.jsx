@@ -8,7 +8,7 @@ import ColorSelector from './ColorSelector'
 import { editTask } from '../../store/actions'
 import '@style/tasklist/edit-window.less'
 
-const EditWindow = ({ show, task, toggleFunction, editTask }) => {
+export const EditWindow = ({ show, task, toggleFunction, editTask }) => {
     const [fromDate, setFromDate] = useState(task.from),
         [toDate, setToDate] = useState(task.to),
         [color, setColor] = useState(task.color),
