@@ -1,20 +1,39 @@
 import React from 'react'
-import { Provider } from 'react-redux'
-import configureStore from 'redux-mock-store'
-import EditWindow from '../../../src/components/tasklist/EditWindow'
-import { shallow } from 'enzyme'
+import { EditWindow } from '../../../src/components/tasklist/EditWindow.jsx'
+import { mount } from 'enzyme'
 
 describe('EditWindow', () => {
-  test('should ', () => {
-    const store = configureStore([])({ editTask: () => {} })
-    const component = mount(
-      <Provider store={store}>
-        <EditWindow
-          show={true}
-          task={{ from: new Date(), to: new Date(), color: 'green' }}
-          toggleFunction={() => {}}
-        />
-      </Provider>
-    )
+  const getComponent = (specific) => {
+    const props = {
+      show: true,
+      task: {
+        from: new Date(2020, 4, 22),
+        to: new Date(2020, 4, 22),
+        color: 'green',
+      },
+      toggleFunction: () => {},
+      editTask: () => {},
+      ...specific,
+    }
+
+    return mount(<EditWindow {...props} />)
+  }
+  test('should close itself', () => {
+    const closeFunc = jest.fn()
+    const component = getComponent({ toggleFunction: closeFunc })
+
+    component.find('.close').simulate('click')
+    expect(closeFunc).toHaveBeenCalled()
+
+    component.find('div[children="Отменить"]').simulate('click')
+    expect(closeFunc).toHaveBeenCalledTimes(2)
+  })
+
+  test('should save edited task', () => {
+    const saveFunc = jest.fn()
+    const component = getComponent({ editTask: saveFunc })
+    component.find('div[children="Сохранить"]').simulate('click')
+
+    expect(saveFunc).toHaveBeenCalled()
   })
 })
