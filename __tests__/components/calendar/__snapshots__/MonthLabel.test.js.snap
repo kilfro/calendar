@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MonthLabel component should render correctly 1`] = `
+<div
+  className="month-label"
+>
+  2020 ├F3: M08┤
+</div>
+`;
