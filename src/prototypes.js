@@ -40,3 +40,25 @@ Date.prototype.toLocalISOString = function () {
     pad(this.getMinutes())
   )
 }
+
+/**
+ * Returns string in format 'month YEAR'
+ */
+Date.prototype.toMonthYearString = function () {
+  var months = [
+    'январь',
+    'февраль',
+    'март',
+    'апрель',
+    'май',
+    'июнь',
+    'июль',
+    'август',
+    'сентябрь',
+    'октябрь',
+    'ноябрь',
+    'декабрь',
+  ]
+
+  return months[this.getMonth()] + ' ' + this.getFullYear()
+}

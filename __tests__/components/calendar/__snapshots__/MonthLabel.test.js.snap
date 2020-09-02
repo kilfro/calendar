@@ -4,6 +4,6 @@ exports[`MonthLabel component should render correctly 1`] = `
 <div
   className="month-label"
 >
-  2020 ├F3: M08┤
+  август 2020
 </div>
 `;
