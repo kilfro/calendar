@@ -42,7 +42,6 @@ Date.prototype.toLocalISOString = function () {
 }
 
 /**
-<<<<<<< HEAD
  * Returns pair 'month year'
  */
 Date.prototype.toMonthYearString = function () {
@@ -51,24 +50,6 @@ Date.prototype.toMonthYearString = function () {
     'апрель', 'май', 'июнь',
     'июль', 'август', 'сентябрь',
     'октябрь', 'ноябрь', 'декабрь',
-=======
- * Returns string in format 'month YEAR'
- */
-Date.prototype.toMonthYearString = function () {
-  var months = [
-    'январь',
-    'февраль',
-    'март',
-    'апрель',
-    'май',
-    'июнь',
-    'июль',
-    'август',
-    'сентябрь',
-    'октябрь',
-    'ноябрь',
-    'декабрь',
->>>>>>> 0db6c544274a79f31327e45c545155621041b7fc
   ]
 
   return months[this.getMonth()] + ' ' + this.getFullYear()

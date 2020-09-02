@@ -78,12 +78,8 @@
       "!**/node_modules/**",
       "!**/coverage/**",
       "!**/dist/**",
-<<<<<<< HEAD
-      "!**/*.config.*"
-=======
       "!webpack.config.js",
       "!**/index.js"
->>>>>>> 0db6c544274a79f31327e45c545155621041b7fc
     ]
   }
 }
