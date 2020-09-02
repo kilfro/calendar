@@ -1,15 +1,38 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
+
+const cssLoaders = (extra) => {
+  const loaders = [
+    {
+      loader: MiniCssExtractPlugin.loader,
+      options: {
+        hmr: isDev,
+        reloadAll: true,
+      },
+    },
+    'css-loader',
+  ]
+
+  if (extra) {
+    loaders.push(extra)
+  }
+
+  return loaders
+}
 
 module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
@@ -17,6 +40,13 @@ module.exports = {
       '@style': path.resolve(__dirname, 'src', 'styles'),
       '@store': path.resolve(__dirname, 'src', 'store'),
     },
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+    minimize: true,
+    minimizer: [new TerserPlugin(), new OptimizeCssAssetWebpackPlugin()],
   },
   devServer: {
     port: 3000,
@@ -33,12 +63,12 @@ module.exports = {
         },
       },
       {
-        test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader'],
+        test: /\.css$/,
+        use: cssLoaders(),
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.less$/,
+        use: cssLoaders('less-loader'),
       },
     ],
   },
@@ -49,5 +79,9 @@ module.exports = {
         collapseWhitespace: isProd,
       },
     }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
+    }),
+    new CleanWebpackPlugin(),
   ],
 }
