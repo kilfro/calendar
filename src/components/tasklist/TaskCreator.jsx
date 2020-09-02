@@ -7,7 +7,7 @@ import { addTask } from '../../store/actions'
 import DateInput from './DateInput'
 import ColorSelector from './ColorSelector'
 
-const TaskCreator = ({ selected, addTask }) => {
+export const TaskCreator = ({ selected, addTask }) => {
     const [fromDate, setFromDate] = useState(selected)
     const [toDate, setToDate] = useState(selected)
     const [color, setColor] = useState('green')
