@@ -45,13 +45,14 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
     },
-    minimize: true,
+    minimize: isProd,
     minimizer: [new TerserPlugin(), new OptimizeCssAssetWebpackPlugin()],
   },
   devServer: {
     port: 3000,
     hot: isDev,
   },
+  devtool: isDev ? 'source-map' : '',
   module: {
     rules: [
       {

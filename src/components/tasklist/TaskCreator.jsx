@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { v4 as getUidV4 } from 'uuid'
 import '@style/tasklist/taskcreator.less'
 import Button from '../Button'
-import { addTask } from '../../store/actions'
+import { createTask} from '../../store/actions'
 import DateInput from './DateInput'
 import ColorSelector from './ColorSelector'
 
@@ -73,7 +73,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-    addTask
+    createTask
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TaskCreator)

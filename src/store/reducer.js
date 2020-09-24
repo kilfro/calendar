@@ -1,5 +1,6 @@
-import { actionTypes } from './constants'
 import '../prototypes'
+
+import { actionTypes } from './constants'
 
 const currentDay = new Date()
 
@@ -13,15 +14,11 @@ const reviver = (key, value) => {
   return value
 }
 
-const tasksMap = localStorage.getItem('tasksMap')
-  ? JSON.parse(localStorage.getItem('tasksMap'), reviver)
-  : {}
-
 const defaultState = {
   now: currentDay,
   selected: currentDay,
   month: currentDay,
-  tasksMap,
+  tasksMap: {},
 }
 
 export const reducer = (state = defaultState, action) => {
@@ -37,12 +34,6 @@ export const reducer = (state = defaultState, action) => {
       return {
         ...state,
         month: action.month,
-      }
-    case actionTypes.GO_TO_TODAY:
-      return {
-        ...state,
-        month: currentDay,
-        selected: currentDay,
       }
     case actionTypes.UPDATE_NOW:
       return {
@@ -68,10 +59,11 @@ export const reducer = (state = defaultState, action) => {
     case actionTypes.REMOVE_TASK:
       const { uid } = action
       const tasks = { ...state.tasksMap }
-      const filteredTasks = tasks[selected.getString()].filter(task => task.uid !== uid)
+      const filteredTasks = tasks[selected.getString()].filter(
+        (task) => task.uid !== uid
+      )
 
       tasks[selected.getString()] = filteredTasks
-      localStorage.setItem('tasksMap', JSON.stringify(tasks))
 
       return {
         ...state,
@@ -80,7 +72,9 @@ export const reducer = (state = defaultState, action) => {
     case actionTypes.EDIT_TASK:
       const editedTask = action.task
       const tasksToEdit = { ...state.tasksMap }
-      const editedTasks = tasksToEdit[selected.getString()].map(task => task.uid === editedTask.uid ? editedTask : task)
+      const editedTasks = tasksToEdit[selected.getString()].map((task) =>
+        task.uid === editedTask.uid ? editedTask : task
+      )
 
       tasksToEdit[selected.getString()] = editedTasks
       localStorage.setItem('tasksMap', JSON.stringify(tasksToEdit))
@@ -88,6 +82,22 @@ export const reducer = (state = defaultState, action) => {
       return {
         ...state,
         tasksMap: tasksToEdit,
+      }
+    case actionTypes.PUT_TASKS:
+      const loadedTasks = JSON.parse(action.tasks, reviver)
+      const newTasksMap = {}
+
+      loadedTasks.forEach((task) => {
+        if (newTasksMap.hasOwnProperty(task.from.getString())) {
+          newTasksMap[task.from.getString()].push(task)
+        } else {
+          newTasksMap[task.from.getString()] = [task]
+        }
+      })
+
+      return {
+        ...state,
+        tasksMap: newTasksMap,
       }
     default:
       return state

@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
-import { connect } from 'react-redux'
-import { X, PencilSquare } from 'react-bootstrap-icons'
-import { removeTask } from '../../store/actions'
 import '@style/tasklist/task.less'
-import EditWindow from './EditWindow'
 
-const Task = ({ task, removeTask }) => {
+import { PencilSquare, X } from 'react-bootstrap-icons'
+import React, { useState } from 'react'
+
+import EditWindow from './EditWindow'
+import { connect } from 'react-redux'
+import { deleteTask } from '../../store/actions'
+
+const Task = ({ task, deleteTask }) => {
     const { from, to, color, title, description } = task
     const [editWindowIsOpen, setEditWindowIsOpen] = useState(false)
 
@@ -18,7 +20,7 @@ const Task = ({ task, removeTask }) => {
                 <div className='title'>{title}</div>
                 <div className='buttons'>
                     <PencilSquare onClick={toggleEditWindow} />
-                    <X onClick={(() => removeTask(task.uid))} />
+                    <X onClick={(() => deleteTask(task.uid))} />
                 </div>
             </div>
             <div>{description}</div>
@@ -29,7 +31,7 @@ const Task = ({ task, removeTask }) => {
 }
 
 const mapDispatchToProps = {
-    removeTask
+    deleteTask
 }
 
 export default connect(null, mapDispatchToProps)(Task)

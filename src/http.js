@@ -1,20 +1,23 @@
+import regeneratorRuntime from 'regenerator-runtime'
+
 export class Http {
   static HEADERS = { 'Content-Type': 'application/json' }
 
   static async get(url) {
-    return await request(url)
+    const response = await request(url)
+    return await response.json()
   }
 
   static async post(url, data = {}) {
-    return request(url, 'POST', data)
+    return await request(url, 'POST', data)
   }
 
   static async put(url, data = {}) {
-    return request(url, 'PUT', data)
+    return await request(url, 'PUT', data)
   }
 
   static async delete(url) {
-    return request(url, 'DELETE')
+    return await request(url, 'DELETE')
   }
 }
 
@@ -28,6 +31,5 @@ async function request(url, method = 'GET', data) {
     config.body = JSON.stringify(data)
   }
 
-  const response = await fetch(url, config)
-  return await response.json()
+  return await fetch(url, config)
 }
