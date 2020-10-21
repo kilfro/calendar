@@ -26,28 +26,31 @@ const getTasks = (req, res) => {
     'SELECT * FROM tasks WHERE "from" BETWEEN $1 AND $2',
     [...betweenParams],
     (error, result) => {
+      res.set('Access-Control-Allow-Origin', '*')
       if (error) {
         console.error(error)
         res.status(500).send()
       } else {
-        res.set('Access-Control-Allow-Origin', '*')
         res.status(200).json(JSON.stringify(result.rows))
       }
     }
   )
 }
 
-const insertTask = (req, res) => {
-  const { uid, from, to, color, title, description } = req.body
+const insertTask = async (req, res) => {
+  const body = req.body
+  console.log(body)
+  const { uid, from, to, color, title, description } = body
 
   pool.query(
     `INSERT INTO tasks (uid, 'from', 'to', color, title, description)
       VALUES(?, ?, ?, ?, ?, ?)`,
     [uid, from, to, color, title, description],
     (error) => {
+      res.set('Access-Control-Allow-Origin', '*')
       if (error) {
         console.error(error)
-        res.status(500).body(error)
+        res.status(500)
       } else {
         res.status(200).send()
       }
@@ -93,9 +96,15 @@ const deleteTask = (req, res) => {
   })
 }
 
+const getOptions = (req, res) => {
+  res.set('Access-Control-Allow-Origin', '*')
+  res.status(204).send()
+}
+
 module.exports = {
   getTasks,
   insertTask,
   updateTask,
   deleteTask,
+  getOptions,
 }

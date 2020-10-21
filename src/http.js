@@ -1,3 +1,4 @@
+import axios from 'axios'
 import regeneratorRuntime from 'regenerator-runtime'
 
 export class Http {
@@ -5,11 +6,12 @@ export class Http {
 
   static async get(url) {
     const response = await request(url)
-    return await response.json()
+    return await response.data
   }
 
   static async post(url, data = {}) {
-    return await request(url, 'POST', data)
+    return await axios.post(url, data)
+    // return await request(url, 'POST', data)
   }
 
   static async put(url, data = {}) {
@@ -23,13 +25,13 @@ export class Http {
 
 async function request(url, method = 'GET', data) {
   const config = {
+    url,
     method,
-    headers: Http.HEADERS,
   }
 
   if (method === 'POST' || method === 'PUT') {
-    config.body = JSON.stringify(data)
+    config.data = data
   }
 
-  return await fetch(url, config)
+  return await axios(config)
 }

@@ -40,10 +40,18 @@ function* loadTasksAndSetNewMonth(action) {
 function* watchDeleteTask() {
   yield takeLatest(actionTypes.DELETE_TASK, function* (action) {
     yield call(Http.delete, `http://127.0.0.1:4500/api/tasks/${action.uid}`)
-    yield put(removeTask(action.uid))
+    yield put(removeTask, action.uid)
+  })
+}
+
+function* watchCreateTask() {
+  yield takeLatest(actionTypes.CREATE_TASK, function* (action) {
+    const { task } = action
+    yield call(Http.post, 'http://127.0.0.1:4500/api/tasks', task)
+    yield put(addTask, task)
   })
 }
 
 export function* rootSaga() {
-  yield all([watchChangeMonth(), watchDeleteTask()])
+  yield all([watchChangeMonth(), watchDeleteTask(), watchCreateTask()])
 }

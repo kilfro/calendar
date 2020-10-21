@@ -63,7 +63,11 @@ export const reducer = (state = defaultState, action) => {
         (task) => task.uid !== uid
       )
 
-      tasks[selected.getString()] = filteredTasks
+      if (filteredTasks.length === 0) {
+        delete task[selected.getString()]
+      } else {
+        tasks[selected.getString()] = filteredTasks
+      }
 
       return {
         ...state,
